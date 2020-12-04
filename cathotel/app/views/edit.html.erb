@@ -1,0 +1,19 @@
+<form action="<% cat_url(@cat)%>" method = "POST">
+    <input type="hidden" name="_method" value="patch" >
+    <label for="name">name</label>
+    <input id="name" type="text" name="cat[name]" value="<%= cat.name %>">
+
+    <label for="birth_date">birth_date</label>
+    <input id="birth_date" type="date" birth_date="cat[birth_date]" value="<%= cat.birth_date %>">
+
+    <label for="age">age</label>
+    <input id="age" type="integer" age="cat[age]" value="<%= cat.age %>">
+
+    <label for="sex">sex</label>
+    <input id="sex" type="radio" sex="cat[sex]" value="<%= cat.sex == "M" ? "Selected", "" %>">
+    <input id="sex" type="radio" sex="cat[sex]" value="<%= cat.sex == "F" ? "Selected", "" %>">
+
+    <label for="description">description</label>
+    <input id="description" type="integer" description="cat[description]" value="<%= cat.description %>">
+
+    <input type = "submit" value ="update cat" 
